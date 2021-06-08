@@ -1,0 +1,89 @@
+@use '../utils/_variables';
+
+section#aboutUs {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 175px;
+  
+  .header {
+    max-width: 535px;
+    text-align: center;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 32px;
+      line-height: 43px;
+      font-weight: variables.$font-black;
+      color: variables.$color-blue-700;
+
+      span {
+        color: variables.$color-orange-500;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 25px;
+
+      margin-top: 20px;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+
+    margin-top: 68px;
+
+    img {
+      max-width: 550px;
+      max-height: 550px;
+
+      border-bottom-left-radius: 250px;
+      border-bottom-right-radius: 26px;
+      border-top-left-radius: 26px;
+      border-top-right-radius: 78px;
+    }
+
+    & > div {
+      margin-left: 55px;
+
+      .title {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 58px;
+          height: 58px;
+        }
+
+        h2 {
+          font-size: 28px;
+          font-weight: variables.$font-bold;
+          color: variables.$color-blue-500;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 30px;
+        margin: 30px 0;
+      }
+
+      button {
+        height: 44px;
+
+        font-size: 14px;
+        font-weight: variables.$font-black;
+        letter-spacing: 1.5px;
+
+        padding: 0 23px;
+
+        color: variables.$color-orange-500;
+        background: variables.$color-white;
+        border: 1px solid variables.$color-orange-500;
+      }
+    }
+  }
+}

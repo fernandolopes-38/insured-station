@@ -1,0 +1,89 @@
+@use '../utils/_variables';
+
+section#services {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 175px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .infos {
+    flex: 0 1 546px;
+
+    h1 {
+      font-size: 32px;
+      line-height: 43px;
+      font-weight: variables.$font-black;
+      color: variables.$color-blue-700;
+
+      span {
+        color: variables.$color-orange-500;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 30px;
+      margin: 25px 0;
+    }
+
+    .types {
+      display: flex;
+
+
+      ul {
+        list-style: none;
+
+        & + ul {
+          margin-left: 50px;
+        }
+      }
+    
+      li {
+        margin-top: 15px;
+    
+        &::before {
+          content: "\2022";
+          color: variables.$color-orange-500;
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    margin-top: 25px;
+
+    button {
+      height: 40px;
+      font-size: 14px;
+      font-weight: variables.$font-black;
+      letter-spacing: 2px;
+    }
+    .btn-aboutus {
+      color: variables.$color-blue-500;
+      border: 1px solid variables.$color-blue-500;
+      padding: 0 18px;
+    }
+    .btn-signup {
+      background: variables.$color-orange-500;
+      padding: 0 24px;
+      margin-left: 20px;
+    }
+  }
+
+  .img-container {
+    flex: 0 1 610px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+  }
+}

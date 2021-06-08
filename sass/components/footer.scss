@@ -1,0 +1,102 @@
+@use '../utils/_variables';
+
+footer {
+  background: variables.$color-gray-100;
+
+  .wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px 0 40px;
+  }
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+
+    .input-container {
+      height: 45px;
+
+      input::placeholder {
+        font-size: 12px;
+        line-height: 1.25;
+        font-weight: variables.$font-medium;
+      }
+      
+      button {
+        height: 30px;
+        font-size: 9px;
+        letter-spacing: 1px;
+        padding: 0 17px;
+      }
+    }
+
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 750px;
+
+    margin: 40px 0;
+  }
+
+  .footer-column {
+    h2 {
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: variables.$color-blue-700;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    height: 36px;
+    width: 36px;
+    border-radius: 12px;
+    background: variables.$color-gray-200;
+  
+    color: variables.$color-white;
+
+    & + div {
+      margin-top: 10px;
+    }
+  }
+
+  ul {
+    margin-top: 16px;
+    list-style: none;
+  }
+
+  li {
+    font-size: 14px;    
+    margin-top: 10px;
+    color: variables.$color-gray-500;
+  }
+
+  .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid variables.$color-gray-200;
+    padding-top: 40px;
+
+    p {
+      font-size: 12px;
+      font-weight: variables.$font-bold;
+      color: variables.$color-gray-500;
+
+      & + p {
+        font-weight: variables.$font-regular;
+        margin-top: 8px;
+      }
+    }
+  }
+  .tier-logo {
+    width: 36px;
+    height: 36px;
+  }
+}
