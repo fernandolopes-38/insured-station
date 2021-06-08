@@ -31,59 +31,236 @@ section#aboutUs {
   }
 
   .content {
-    display: flex;
-    align-items: center;
+    position: relative;
+  }
+
+  .carousel {
+    position: relative;
+    height: 550px;
 
     margin-top: 68px;
 
-    img {
-      max-width: 550px;
-      max-height: 550px;
+    article {
+      position: absolute;
+      display: flex;
+      align-items: center;
 
-      border-bottom-left-radius: 250px;
-      border-bottom-right-radius: 26px;
-      border-top-left-radius: 26px;
-      border-top-right-radius: 78px;
+      opacity: 0;
+
+      transition: opacity 1s ease 0s;
+
+      & > img {
+        max-width: 550px;
+        min-height: 550px;
+  
+        border-bottom-left-radius: 250px;
+        border-bottom-right-radius: 26px;
+        border-top-left-radius: 26px;
+        border-top-right-radius: 78px;
+      }
     }
 
-    & > div {
-      margin-left: 55px;
+    input {
+      display: none;
+    }
+  }
 
-      .title {
+  .infos {
+    margin-left: 80px;
+
+    .title {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &__img {
+        width: 58px;
+        height: 58px;
+        border: 1px solid variables.$color-white-500;
+        border-radius: 50%;
+        
         display: flex;
         align-items: center;
+        justify-content: center;
 
         img {
-          width: 58px;
-          height: 58px;
-        }
-
-        h2 {
-          font-size: 28px;
-          font-weight: variables.$font-bold;
-          color: variables.$color-blue-500;
+          width: 31px;
+          height: 31px;
         }
       }
 
-      p {
-        font-size: 14px;
-        line-height: 30px;
-        margin: 30px 0;
-      }
-
-      button {
-        height: 44px;
-
-        font-size: 14px;
-        font-weight: variables.$font-black;
-        letter-spacing: 1.5px;
-
-        padding: 0 23px;
-
-        color: variables.$color-orange-500;
-        background: variables.$color-white;
-        border: 1px solid variables.$color-orange-500;
+      h2 {
+        font-size: 28px;
+        font-weight: variables.$font-bold;
+        color: variables.$color-blue-500;
+        margin-left: 10.5px;
+        z-index: 5;
       }
     }
+
+    p {
+      font-size: 14px;
+      line-height: 30px;
+      margin: 30px 0;
+    }
+
+    button {
+      height: 44px;
+
+      font-size: 14px;
+      font-weight: variables.$font-black;
+      letter-spacing: 1.5px;
+
+      padding: 0 23px;
+
+      color: variables.$color-orange-500;
+      background: variables.$color-white;
+      border: 1px solid variables.$color-orange-500;
+    }
+  }
+
+  .img__circles {
+    position: absolute;
+    left: -27px;
+
+    width: 111px;
+    height: 111px;
+
+    & > div {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+    }
+
+    .circle__1 {
+      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.25);
+      border-radius: 50%;
+    }
+    .circle__2 {
+      width: 93px;
+      height: 93px;
+      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.5);
+      border-radius: 50%;
+    }
+    .circle__3 {
+      width: 76px;
+      height: 76px;
+      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.75);
+      border-radius: 50%;
+    }
+  }
+
+  .circles {
+    position: absolute;
+    bottom: -98px;
+    left: -134px;
+
+    width: 320px;
+    height: 320px;
+
+    z-index: 10;
+
+    & > div {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+    }
+
+    .circle__1 {
+      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.2);
+      border-radius: 50%;
+    }
+    .circle__2 {
+      width: 280px;
+      height: 280px;
+      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.4);
+      border-radius: 50%;
+    }
+    .circle__3 {
+      width: 240px;
+      height: 240px;
+      border: 2px solid rgba($color: variables.$color-white-500, $alpha: 0.6);
+      border-radius: 50%;
+    }
+    .circle__4 {
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba($color: variables.$color-white-500, $alpha: 0.8);
+      border-radius: 50%;
+    }
+    .circle__5 {
+      width: 160px;
+      height: 160px;
+      border: 2px solid variables.$color-white-500;
+      border-radius: 50%;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+
+  .labels {
+    position: relative;
+    width: 123px;
+    height: 35px;
+    transform: rotate(-122deg);
+
+    label {
+      position: absolute;
+      display: none;
+      cursor: pointer;
+
+      i {
+        font-size: 38px;
+        color: variables.$color-blue-700;
+      }
+    }
+  }
+
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(348deg);
+
+    height: 36px;
+    border-left: 1px solid variables.$color-blue-700;
+  }
+
+  $num-of-slide: 3;
+  @for $i from 1 through $num-of-slide {
+    #aboutUsSlide#{$i}:checked {
+      & ~ .carousel__items article:nth-child(#{$i}) {
+        opacity: 1;
+        transition-delay: 0.4s;
+      }
+    }
+  }
+
+  @for $i from 1 through ($num-of-slide - 1) {
+    #aboutUsSlide#{$i}:checked {
+      & ~ .circles .circle__5 .labels label:nth-of-type(#{$i + 1}) {
+        display: block;
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+  #aboutUsSlide#{$num-of-slide}:checked ~ .circles .circle__5 .labels label:nth-of-type(1) {
+    display: block;
+    transform: rotateZ(180deg);
+  }
+  @for $i from 2 through $num-of-slide {
+    #aboutUsSlide#{$i}:checked {
+      & ~ .circles .circle__5 .labels label:nth-of-type(#{$i - 1}) {
+        display: block;
+        right: 0;
+      }
+    }
+  }
+  #aboutUsSlide#{1}:checked ~ .circles .circle__5 .labels label:nth-of-type(#{$num-of-slide}) {
+    display: block;
+    right: 0;
   }
 }

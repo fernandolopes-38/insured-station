@@ -1,16 +1,18 @@
-let form = null;
+let heroForm = null;
+let footerForm = null;
 
 window.addEventListener('load', () => {
-  form = document.querySelector('form');
+  heroForm = document.getElementById('heroForm');
+  footerForm = document.getElementById('footerForm');
 
-  form.addEventListener('submit', handleSubmit);
+  heroForm.addEventListener('submit', handleSubmit);
+  footerForm.addEventListener('submit', handleSubmit);
 });
 
 const handleSubmit = (event) => {
   event.preventDefault();
   const data = {
-    email: form.elements.email.value,
+    email: event.target.elements.email.value,
   };
-
   console.log(data);
 };
