@@ -53,10 +53,10 @@ section#aboutUs {
         max-width: 550px;
         min-height: 550px;
   
+        border-top-left-radius: 25px;
+        border-top-right-radius: 75px;
+        border-bottom-right-radius: 25px;
         border-bottom-left-radius: 250px;
-        border-bottom-right-radius: 26px;
-        border-top-left-radius: 26px;
-        border-top-right-radius: 78px;
       }
     }
 
@@ -116,6 +116,8 @@ section#aboutUs {
       color: variables.$color-orange-500;
       background: variables.$color-white;
       border: 1px solid variables.$color-orange-500;
+
+      
     }
   }
 
@@ -243,24 +245,30 @@ section#aboutUs {
     #aboutUsSlide#{$i}:checked {
       & ~ .circles .circle__5 .labels label:nth-of-type(#{$i + 1}) {
         display: block;
-        transform: rotateZ(180deg);
+        top: 50%;
+        transform: translateY(-50%) rotateZ(180deg);;
       }
     }
   }
   #aboutUsSlide#{$num-of-slide}:checked ~ .circles .circle__5 .labels label:nth-of-type(1) {
     display: block;
-    transform: rotateZ(180deg);
+    top: 50%;
+    transform: translateY(-50%) rotateZ(180deg);;
   }
   @for $i from 2 through $num-of-slide {
     #aboutUsSlide#{$i}:checked {
       & ~ .circles .circle__5 .labels label:nth-of-type(#{$i - 1}) {
         display: block;
         right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
   #aboutUsSlide#{1}:checked ~ .circles .circle__5 .labels label:nth-of-type(#{$num-of-slide}) {
     display: block;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

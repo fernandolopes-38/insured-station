@@ -1,0 +1,6 @@
+@mixin letter-spacing($letter-spacing) {
+  letter-spacing: ($letter-spacing / 1000) * 1em;
+}
+@mixin line-height($line-height, $font-size) {
+  line-height: $line-height / $font-size;
+}

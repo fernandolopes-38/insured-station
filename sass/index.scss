@@ -10,66 +10,7 @@
 @import './components/blogSection';
 @import './components/footer';
 
-button {
-  color: variables.$color-white;
-  text-transform: uppercase;
-
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 20px;
-  
-  transition: filter 0.2s;
-
-  &:hover {
-    filter: brightness(0.9);
-  }
-}
-
 main {
   max-width: 1440px;
   margin: 75px auto 0;
-}
-
-
-input {
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
-
-.input-container {
-  max-width: 450px;
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding-right: 10px;
-
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 18px;
-  background: variables.$color-white;
-
-  box-shadow: 0 0 9px -4px rgba($color: #000000, $alpha: 0.2);
-
-  input {
-    flex: 1;
-    padding: 0 14px;
-  }
-
-  input::placeholder {
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: variables.$font-medium;
-  }
-
-  button {
-    background: variables.$color-orange-500;
-    font-weight: variables.$font-black;
-  }
 }

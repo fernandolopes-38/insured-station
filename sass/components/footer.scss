@@ -1,7 +1,7 @@
 @use '../utils/_variables';
 
 footer {
-  background: variables.$color-gray-100;
+  background: variables.$color-gray-200;
 
   .wrapper {
     max-width: 1150px;
@@ -56,7 +56,7 @@ footer {
     height: 36px;
     width: 36px;
     border-radius: 12px;
-    background: variables.$color-gray-200;
+    background: variables.$color-gray-400;
   
     color: variables.$color-white;
 
@@ -81,7 +81,7 @@ footer {
     align-items: center;
     justify-content: space-between;
 
-    border-top: 1px solid variables.$color-gray-200;
+    border-top: 1px solid variables.$color-gray-400;
     padding-top: 40px;
 
     p {

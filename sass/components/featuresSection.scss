@@ -182,13 +182,15 @@ section#features {
     max-width: 1240px;
     margin-top: 50px;
     padding-top: 50px;
-    border-top: 1px solid variables.$color-gray-50;
+    border-top: 1px solid variables.$color-gray-100;
   }
 
   .square {
-    height: 4.375rem;
-    width: 6.25rem;
-    background-color: variables.$color-gray-100;
+    width: 120px;
+    height: 80px;
+
+    border: 1px solid variables.$color-gray-100;
+    background-color: variables.$color-white-400;
   }
 
 

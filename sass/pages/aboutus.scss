@@ -1,0 +1,167 @@
+@use '../utils/_variables';
+@use '../utils/_helpers';
+@use 'sass:color';
+
+@import '../global';
+
+@import '../components/header';
+@import '../components/footer';
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  & > h1 {
+    font-size: 72px;
+    line-height: 95px;
+    font-weight: variables.$font-black;
+    color: variables.$color-gray-600;
+    text-align: center;
+
+    margin: 150px auto;
+  }
+}
+
+section#content {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+article {
+  display: flex;
+  align-items: center;
+
+  & > img {
+    max-width: 550px;
+    min-height: 550px;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 250px;
+  }
+
+  .infos {
+    margin-left: 80px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: variables.$font-bold;
+      color: variables.$color-blue-700;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 30px;
+      margin: 40px 0;
+    }
+  }
+
+  .button {
+    width: 336px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      height: 44px;
+      width: 158px;
+      font-size: 14px;
+      font-weight: variables.$font-black;
+      @include helpers.letter-spacing(100);
+
+      border-top-left-radius: 10px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 25px;
+    }
+    &__primary {
+      background: variables.$color-orange-500;
+    }
+    &__secundary {
+      color: variables.$color-blue-500;
+      background: rgba($color: variables.$color-blue-500, $alpha: 0.1);
+      border: 1px solid variables.$color-blue-500;
+    }
+  }
+}
+
+section#sponsors {
+  max-width: 1205px;
+  margin: 100px auto 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  .square {
+    width: 120px;
+    height: 80px;
+
+    border: 1px solid variables.$color-gray-100;
+    background-color: variables.$color-white-400;
+  }
+}
+
+section#infos {
+  max-width: 1260px;
+  margin: 100px auto 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  figure {
+    flex: 0 1 370px;
+  }
+
+  .img-container {
+    width: 370px;
+    height: 242px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+    
+    &.left {
+      border-top-left-radius: 250px;
+      border-top-right-radius: 75px;
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+    &.center {
+      border-top-left-radius: 75px;
+      border-top-right-radius: 75px;
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+    &.right {
+      border-top-left-radius: 75px;
+      border-top-right-radius: 250px;
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+  }
+
+  figcaption {
+    text-align: center;
+    margin-top: 20px;
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+section#action {
+  max-width: 1050px;
+  margin: 70px auto;
+
+  height: 150px;
+  border: 1px solid variables.$color-gray-700;
+  border-radius: 45px;
+}

@@ -23,15 +23,18 @@ header {
       font-size: 13px;
       font-weight: variables.$font-bold;
       color: variables.$color-blue-700;
+      color: color.adjust(variables.$color-blue-700, $alpha: -0.25);
       text-transform: uppercase;
-
+      
       padding: 0 1.05rem;
 
-      a {
-        transition: color 0.3s;
+      transition: color 0.2s;
+
+      &.active {
+        color: variables.$color-blue-700;
       }
 
-      a:hover {
+      &:hover {
         color: color.scale(variables.$color-blue-700, $lightness: 25%);
       }
     }

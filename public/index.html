@@ -22,26 +22,26 @@
   <title>Home | Insured Station</title>
 </head>
 <body>
-  <header id="home">
+  <header>
     <a href="#">
       <img class="logo" src="./img/logo.png" alt="logo">
     </a>
 
     <nav>
       <ul>
-        <li>
+        <li class="active">
           <a href="/public/pages/aboutus.html">About Us</a>
         </li>
-        <li>
+        <li class="active">
           <a href="#pricing">Pricing</a>
         </li>
-        <li>
+        <li class="active">
           <a href="#features">Features</a>
         </li>
-        <li>
+        <li class="active">
           <a href="#blog">Blog</a>
         </li>
-        <li>
+        <li class="active">
           <a href="#contact">Contact</a>
         </li>
       </ul>
@@ -102,128 +102,134 @@
           accumsan augue et, aliquam pharetra ipsum. Sed quis rutrum est.
         </p>
       </div>
-
-      <!-- <div class="content"> -->
         
-        <div class="carousel">
-          <input type=radio name="aboutUsSlider" id="aboutUsSlide1" checked />
-          <input type=radio name="aboutUsSlider" id="aboutUsSlide2" />
-          <input type=radio name="aboutUsSlider" id="aboutUsSlide3" />
+      <div class="carousel">
+        <input type=radio name="aboutUsSlider" id="aboutUsSlide1" checked />
+        <input type=radio name="aboutUsSlider" id="aboutUsSlide2" />
+        <input type=radio name="aboutUsSlider" id="aboutUsSlide3" />
 
-          <div class="circles">
-            <div class="circle__1"></div>
-            <div class="circle__2"></div>
-            <div class="circle__3"></div>
-            <div class="circle__4"></div>
-            <div class="circle__5">
-              <div class="labels">
-                <div class="line"></div>
-                <label for="aboutUsSlide1"><i class="fas fa-long-arrow-alt-right"></i></label>
-                <label for="aboutUsSlide2"><i class="fas fa-long-arrow-alt-right"></i></label>
-                <label for="aboutUsSlide3"><i class="fas fa-long-arrow-alt-right"></i></label>
-              </div>
+        <div class="circles">
+          <div class="circle__1"></div>
+          <div class="circle__2"></div>
+          <div class="circle__3"></div>
+          <div class="circle__4"></div>
+          <div class="circle__5">
+            <div class="labels">
+              <div class="line"></div>
+              <label for="aboutUsSlide1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40.243" height="13.501" viewBox="0 0 40.243 13.501">
+                  <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M32.909,13.242a.919.919,0,0,1-.007-1.294L37.17,7.667H.907a.914.914,0,0,1,0-1.828H37.17L32.9,1.557A.925.925,0,0,1,32.9.263.91.91,0,0,1,34.189.27l5.794,5.836h0a1.026,1.026,0,0,1,.19.288.872.872,0,0,1,.07.352.916.916,0,0,1-.26.64l-5.794,5.836A.9.9,0,0,1,32.909,13.242Z" transform="translate(0 0)" fill="#02184e"/>
+                </svg>
+              </label>
+              <label for="aboutUsSlide2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40.243" height="13.501" viewBox="0 0 40.243 13.501">
+                  <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M32.909,13.242a.919.919,0,0,1-.007-1.294L37.17,7.667H.907a.914.914,0,0,1,0-1.828H37.17L32.9,1.557A.925.925,0,0,1,32.9.263.91.91,0,0,1,34.189.27l5.794,5.836h0a1.026,1.026,0,0,1,.19.288.872.872,0,0,1,.07.352.916.916,0,0,1-.26.64l-5.794,5.836A.9.9,0,0,1,32.909,13.242Z" transform="translate(0 0)" fill="#02184e"/>
+                </svg>
+              </label>
+              <label for="aboutUsSlide3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40.243" height="13.501" viewBox="0 0 40.243 13.501">
+                  <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M32.909,13.242a.919.919,0,0,1-.007-1.294L37.17,7.667H.907a.914.914,0,0,1,0-1.828H37.17L32.9,1.557A.925.925,0,0,1,32.9.263.91.91,0,0,1,34.189.27l5.794,5.836h0a1.026,1.026,0,0,1,.19.288.872.872,0,0,1,.07.352.916.916,0,0,1-.26.64l-5.794,5.836A.9.9,0,0,1,32.909,13.242Z" transform="translate(0 0)" fill="#02184e"/>
+                </svg>   
+              </label>
             </div>
-          </div>
-
-          <div class="carousel__items">
-            <article>
-              <img src="./img/aboutus-img.png" alt="">
-      
-              <div class="infos">
-                <div class="title">
-                  <div class="img__circles">
-                    <div class="circle__1"></div>
-                    <div class="circle__2"></div>
-                    <div class="circle__3"></div>
-                  </div>
-
-                  <div class="title__img">
-                    <img src="./img/title-img.png" alt="">
-                  </div>
-                  <h2>
-                    Lead & Client Management.
-                  </h2>
-                </div>
-      
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ligula nisl, tincidunt accumsan augue et, 
-                  aliquam pharetra ipsum. Sed quis rutrum est. Integer eu mi et nibh suscipit dignissim sit amet volutpat dui. 
-                  Cras congue dolor quam, at semper massa pellentesque nec.
-                </p>
-      
-                <button>
-                  VIEW FEATURE
-                </button>
-              </div>
-            </article>
-  
-            <article>
-              <img src="./img/backgorund.png" alt="">
-      
-              <div class="infos">
-                <div class="title">
-                  <div class="img__circles">
-                    <div class="circle__1"></div>
-                    <div class="circle__2"></div>
-                    <div class="circle__3"></div>
-                  </div>
-
-                  <div class="title__img">
-                    <img src="./img/title-img.png" alt="">
-                  </div>
-                  <h2>
-                    Lead & Client Management.
-                  </h2>
-                </div>
-      
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ligula nisl, tincidunt accumsan augue et, 
-                  aliquam pharetra ipsum. Sed quis rutrum est. Integer eu mi et nibh suscipit dignissim sit amet volutpat dui. 
-                  Cras congue dolor quam, at semper massa pellentesque nec.
-                </p>
-      
-                <button>
-                  VIEW FEATURE
-                </button>
-              </div>
-            </article>
-
-            <article>
-              <img src="./img/blog-3.png" alt="">
-      
-              <div class="infos">
-                <div class="title">
-                  <div class="img__circles">
-                    <div class="circle__1"></div>
-                    <div class="circle__2"></div>
-                    <div class="circle__3"></div>
-                  </div>
-
-                  <div class="title__img">
-                    <img src="./img/title-img.png" alt="">
-                  </div>
-                  <h2>
-                    Lead & Client Management.
-                  </h2>
-                </div>
-      
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ligula nisl, tincidunt accumsan augue et, 
-                  aliquam pharetra ipsum. Sed quis rutrum est. Integer eu mi et nibh suscipit dignissim sit amet volutpat dui. 
-                  Cras congue dolor quam, at semper massa pellentesque nec.
-                </p>
-      
-                <button>
-                  VIEW FEATURE
-                </button>
-              </div>
-            </article>
           </div>
         </div>
 
-        
+        <div class="carousel__items">
+          <article>
+            <img src="./img/aboutus-img.png" alt="">
+    
+            <div class="infos">
+              <div class="title">
+                <div class="img__circles">
+                  <div class="circle__1"></div>
+                  <div class="circle__2"></div>
+                  <div class="circle__3"></div>
+                </div>
 
-      <!-- </div> -->
+                <div class="title__img">
+                  <img src="./img/title-img.png" alt="">
+                </div>
+                <h2>
+                  Lead & Client Management.
+                </h2>
+              </div>
+    
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ligula nisl, tincidunt accumsan augue et, 
+                aliquam pharetra ipsum. Sed quis rutrum est. Integer eu mi et nibh suscipit dignissim sit amet volutpat dui. 
+                Cras congue dolor quam, at semper massa pellentesque nec.
+              </p>
+    
+              <button>
+                VIEW FEATURE
+              </button>
+            </div>
+          </article>
+
+          <article>
+            <img src="./img/backgorund.png" alt="">
+    
+            <div class="infos">
+              <div class="title">
+                <div class="img__circles">
+                  <div class="circle__1"></div>
+                  <div class="circle__2"></div>
+                  <div class="circle__3"></div>
+                </div>
+
+                <div class="title__img">
+                  <img src="./img/title-img.png" alt="">
+                </div>
+                <h2>
+                  Lead & Client Management.
+                </h2>
+              </div>
+    
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ligula nisl, tincidunt accumsan augue et, 
+                aliquam pharetra ipsum. Sed quis rutrum est. Integer eu mi et nibh suscipit dignissim sit amet volutpat dui. 
+                Cras congue dolor quam, at semper massa pellentesque nec.
+              </p>
+    
+              <button>
+                VIEW FEATURE
+              </button>
+            </div>
+          </article>
+
+          <article>
+            <img src="./img/blog-3.png" alt="">
+    
+            <div class="infos">
+              <div class="title">
+                <div class="img__circles">
+                  <div class="circle__1"></div>
+                  <div class="circle__2"></div>
+                  <div class="circle__3"></div>
+                </div>
+
+                <div class="title__img">
+                  <img src="./img/title-img.png" alt="">
+                </div>
+                <h2>
+                  Lead & Client Management.
+                </h2>
+              </div>
+    
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ligula nisl, tincidunt accumsan augue et, 
+                aliquam pharetra ipsum. Sed quis rutrum est. Integer eu mi et nibh suscipit dignissim sit amet volutpat dui. 
+                Cras congue dolor quam, at semper massa pellentesque nec.
+              </p>
+    
+              <button>
+                VIEW FEATURE
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
 
     </section>
 
@@ -416,7 +422,7 @@
 
   </main>
 
-  <footer id="contact">
+  <footer>
     <div class="wrapper">
       
       <div class="head">
