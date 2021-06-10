@@ -23,7 +23,7 @@ header {
       font-size: 13px;
       font-weight: variables.$font-bold;
       color: variables.$color-blue-700;
-      color: color.adjust(variables.$color-blue-700, $alpha: -0.25);
+      color: color.adjust(variables.$color-blue-700, $alpha: -0.35);
       text-transform: uppercase;
       
       padding: 0 1.05rem;

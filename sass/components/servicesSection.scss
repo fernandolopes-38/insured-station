@@ -1,4 +1,5 @@
 @use '../utils/_variables';
+@use '../utils/_helpers';
 
 section#services {
   max-width: 1220px;
@@ -56,24 +57,27 @@ section#services {
     }
   }
 
-  .buttons {
+  .button {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
     margin-top: 25px;
 
     button {
-      height: 40px;
+      height: 44px;    
       font-size: 14px;
       font-weight: variables.$font-black;
-      letter-spacing: 2px;
+      @include helpers.letter-spacing(100);
     }
-    .btn-aboutus {
-      color: variables.$color-blue-500;
-      border: 1px solid variables.$color-blue-500;
-      padding: 0 18px;
-    }
-    .btn-signup {
+    &__primary {
+      width: 128px;
       background: variables.$color-orange-500;
-      padding: 0 24px;
-      margin-left: 20px;
+    }
+    &__secundary {
+      width: 122px;
+      color: variables.$color-blue-500;
+      background: rgba($color: variables.$color-blue-500, $alpha: 0.1);
+      border: 1px solid variables.$color-blue-500;
     }
   }
 

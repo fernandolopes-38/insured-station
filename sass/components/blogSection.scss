@@ -1,9 +1,6 @@
 @use '../utils/_variables';
 
 section#blog {
-  // max-width: 1080px;
-  // margin-left: auto;
-  // margin-right: auto;
   margin-top: 175px;
 
   .background {
@@ -55,8 +52,8 @@ section#blog {
 
     padding: 15px;
 
-    background: rgba($color: variables.$color-white-400, $alpha: 0.4);
-    backdrop-filter: blur(5px);
+    background: rgba($color: variables.$color-white-400, $alpha: 0.1);
+    backdrop-filter: blur(8px) brightness(105%);
     border: 1px solid rgba($color: variables.$color-white, $alpha: 0.4);
     border-radius: 25px;
 
