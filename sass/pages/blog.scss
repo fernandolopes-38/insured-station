@@ -1,0 +1,123 @@
+@use '../utils/_variables';
+@use '../utils/_helpers';
+@use 'sass:color';
+
+@import '../global';
+
+@import '../components/header';
+@import '../components/footer';
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  & > h1 {
+    font-size: 72px;
+    line-height: 95px;
+    font-weight: variables.$font-black;
+    color: variables.$color-gray-600;
+    text-align: center;
+
+    margin: 150px auto 100px;
+  }
+}
+
+section#blog {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  .grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 60px;
+  }
+  article {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px;
+
+    background: rgba($color: variables.$color-blue-500, $alpha: 0.05);
+    border: 1px solid variables.$color-blue-500;
+    border-radius: 25px;
+  }
+
+  figcaption {
+    margin-top: 24px;
+    
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: variables.$font-bold;
+      color: variables.$color-blue-700;
+    }
+  }
+
+  .container {
+    position: relative;
+    width: 320px;
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+
+    span {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(50%);
+      left: 35px;
+
+      width: 88px;
+      height: 27px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 10px;
+      font-weight: variables.$font-bold;
+      color: variables.$color-white;
+      @include helpers.letter-spacing(100);
+      background: variables.$color-blue-500;
+      border-radius: 30px;
+    }
+  }
+
+  .pagination {
+    margin: 55px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+
+    & > button {
+      width: 36px;
+      height: 36px;
+
+      font-size: 17px;
+      font-weight: variables.$font-black;
+
+      background: variables.$color-blue-500;
+      border-radius: 12px;
+
+      transition: background 0.3s;
+
+      &:hover {
+        filter: none;
+      }
+
+      &:not(.active) {
+        background: color.adjust(variables.$color-blue-500, $alpha: -0.5);
+
+        &:hover {
+          background: color.scale(darken(variables.$color-blue-500,  5%));
+        }
+      }
+    }
+  }
+}

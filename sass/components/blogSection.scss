@@ -1,4 +1,5 @@
 @use '../utils/_variables';
+@use '../utils/_helpers';
 
 section#blog {
   margin-top: 175px;
@@ -78,9 +79,9 @@ section#blog {
     border-radius: 25px;
 
     span {
-      display: block;
       position: absolute;
-      bottom: -14px;
+      bottom: 0;
+      transform: translateY(50%);
       left: 35px;
 
       width: 88px;
@@ -92,10 +93,9 @@ section#blog {
       font-size: 10px;
       font-weight: variables.$font-bold;
       color: variables.$color-white;
-      letter-spacing: 2px;
+      @include helpers.letter-spacing(100);
       background: variables.$color-blue-500;
-      border-radius: 25px;
-      padding: 0 5px;
+      border-radius: 30px;
     }
   }
 

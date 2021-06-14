@@ -1,0 +1,208 @@
+@use '../utils/_variables';
+@use '../utils/_helpers';
+
+@import '../global';
+
+@import '../components/header';
+@import '../components/footer';
+
+section#title {
+  margin: 60px auto 110px;
+  figure {
+    position: relative;
+    max-width: 1340px;
+    width: 100%;
+    height: 575px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow-x: clip;
+  
+    img {
+  
+    }
+  
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(50%);
+      max-width: 1240px;
+      width: 100%;
+      height: 120px;
+
+      display: flex;
+      align-items: center;
+      padding: 0 25px;
+  
+      background: variables.$color-blue-100;
+      border: 1px solid variables.$color-blue-500;
+      border-radius: 25px;
+      
+      z-index: 10;
+
+      h1 {
+        font-size: 30px;
+        font-weight: variables.$font-bold;
+        color: variables.$color-blue-700;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        left: 25px;
+  
+        width: 88px;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        font-size: 10px;
+        font-weight: variables.$font-bold;
+        color: variables.$color-white;
+        @include helpers.letter-spacing(100);
+        background: variables.$color-blue-500;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+section#content {
+  max-width: 1200px;
+  margin: 0 auto 175px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  flex: 0 1 800px;
+
+  h2 {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: variables.$font-bold;
+    color: variables.$color-blue-700;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 2;
+    font-weight: variables.$font-regular;
+  }
+
+  .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+
+    overflow: hidden;
+  }
+}
+
+aside {
+  flex: 0 1 315px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 75px;
+  height: fit-content;
+
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 13px;
+      font-weight: variables.$font-bold;
+      color: variables.$color-blue-700;
+    }
+  }
+
+  .icons {
+    width: 174px;
+    display: flex;
+    justify-content: space-between;
+
+    &__container {
+      width: 36px;
+      height: 36px;
+      background: variables.$color-orange-500;
+      border-radius: 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 18px;
+        color: variables.$color-white;
+      }
+    }
+  }
+
+  .articles {
+    margin: 30px auto;
+
+    h2 {
+      font-size: 13px;
+      font-weight: variables.$font-bold;
+      color: variables.$color-blue-700;
+    }
+
+    & > div {
+      position: relative;
+      padding: 17px 15px;
+
+      background: variables.$color-orange-100;
+      border: 1px solid variables.$color-orange-500;
+
+      border-top-left-radius: 10px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 25px;
+
+      // & + div {
+        margin-top: 28px;
+      // }
+
+      h3 {
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: variables.$font-bold;
+        color: variables.$color-blue-700;
+      }
+
+      &::before {
+        content: 'CATEGORY';
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+
+        font-size: 9px;
+        line-height: 11px;
+        font-weight: variables.$font-black;
+        @include helpers.letter-spacing(100);
+        color: variables.$color-white;
+
+        width: 82px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: variables.$color-orange-500;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 15px;
+      }
+    }
+  }
+}
