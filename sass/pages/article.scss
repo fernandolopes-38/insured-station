@@ -104,6 +104,11 @@ main {
 
     overflow: hidden;
   }
+
+  ul {
+    margin: 30px auto;
+    @include helpers.list-style();
+  }
 }
 
 aside {
@@ -204,5 +209,15 @@ aside {
         border-bottom-left-radius: 15px;
       }
     }
+  }
+
+  .advertise {
+    width: 315px;
+    height: 250px;
+
+    @extend %centered-container;
+
+    background: variables.$color-gray-200;
+    border: 1px solid variables.$color-gray-400;
   }
 }

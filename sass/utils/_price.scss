@@ -1,0 +1,30 @@
+@use 'variables' as *;
+@use 'helpers' as h;
+
+.price {
+  position: relative;
+
+  h2 {
+    font-size: 68px;
+    font-weight: $font-black;
+    color: $color-blue-500;
+
+    &::before {
+      content: '$';
+      font-size: 35px;
+      position: absolute;
+      top: 13px;
+      left: -21px;
+    }
+  }
+
+  span {
+    font-size: 9px;
+    font-weight: $font-bold;
+    color: $color-blue-700;
+    @include h.letter-spacing(117);
+    position: absolute;
+    top: 0;
+    left: -19px;
+  }
+}

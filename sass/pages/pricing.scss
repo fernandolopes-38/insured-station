@@ -1,5 +1,5 @@
-@use '../utils/_variables';
-@use '../utils/_helpers';
+@use '../utils/variables' as *;
+@use '../utils/helpers';
 
 @import '../global';
 
@@ -18,10 +18,10 @@ section#title {
 
   h1 {
     font-size: 60px;
-    font-weight: variables.$font-black;
-    color: variables.$color-blue-700;
+    font-weight: $font-black;
+    color: $color-blue-700;
     span {
-      color: variables.$color-orange-500;
+      color: $color-orange-500;
     }
   }
 
@@ -47,8 +47,8 @@ section#title {
 
     h2 {
       font-size: 85px;
-      font-weight: variables.$font-black;
-      color: variables.$color-orange-500;
+      font-weight: $font-black;
+      color: $color-orange-500;
       margin: auto;
 
       position: absolute;
@@ -72,8 +72,8 @@ section#title {
 
     span {
       font-size: 11px;
-      font-weight: variables.$font-bold;
-      color: variables.$color-gray-800;
+      font-weight: $font-bold;
+      color: $color-gray-800;
       @include helpers.letter-spacing(61);
 
       &:first-child {
@@ -104,11 +104,11 @@ section#features {
     h1 {
       font-size: 39px;
       line-height: 52px;
-      font-weight: variables.$font-black;
-      color: variables.$color-blue-700;
+      font-weight: $font-black;
+      color: $color-blue-700;
 
       span {
-        color: variables.$color-orange-500;
+        color: $color-orange-500;
       }
     }
 
@@ -124,7 +124,7 @@ section#features {
     flex: 1;
     height: 680px;
 
-    background: variables.$color-gray-200;
+    background: $color-gray-200;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 
@@ -145,7 +145,7 @@ section#features {
     margin-left: -25px;
 
     label {
-      color: variables.$color-white;
+      color: $color-white;
       cursor: pointer;
       
       display: flex;
@@ -154,9 +154,9 @@ section#features {
       
       height: 60px;
       width: 60px;
-      background: variables.$color-white;
+      background: $color-white;
 
-      border: 1px solid variables.$color-gray-400;
+      border: 1px solid $color-gray-400;
       
       border-top-left-radius: 10px;
       border-top-right-radius: 25px;
@@ -171,7 +171,7 @@ section#features {
 
       i {
         font-size: 23px;
-        color: variables.$color-blue-500;
+        color: $color-blue-500;
       }
     }
   }
@@ -231,9 +231,9 @@ section#features {
     height: 413px;
     padding: 72px 35px 58px 61px;
 
-    background: variables.$color-white;
+    background: $color-white;
 
-    border: 1px solid variables.$color-gray-400;
+    border: 1px solid $color-gray-400;
     border-top-left-radius: 25px;
     border-top-right-radius: 75px;
     border-bottom-right-radius: 25px;
@@ -247,7 +247,7 @@ section#features {
       &__img {
         width: 58px;
         height: 58px;
-        border: 1px solid variables.$color-white-500;
+        border: 1px solid $color-white-500;
         border-radius: 50%;
         
         display: flex;
@@ -262,8 +262,8 @@ section#features {
 
       h2 {
         font-size: 28px;
-        font-weight: variables.$font-bold;
-        color: variables.$color-blue-500;
+        font-weight: $font-bold;
+        color: $color-blue-500;
         margin-left: 10.5px;
         z-index: 5;
       }
@@ -280,12 +280,12 @@ section#features {
       width: 162px;
 
       font-size: 14px;
-      font-weight: variables.$font-black;
+      font-weight: $font-black;
       @include helpers.letter-spacing(100);
 
-      color: variables.$color-orange-500;
-      background: variables.$color-white;
-      border: 1px solid variables.$color-orange-500;
+      color: $color-orange-500;
+      background: $color-white;
+      border: 1px solid $color-orange-500;
     }
 
     .img__circles {
@@ -302,19 +302,19 @@ section#features {
       }
   
       .circle__1 {
-        border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.25);
+        border: 1px solid rgba($color: $color-white-500, $alpha: 0.25);
         border-radius: 50%;
       }
       .circle__2 {
         width: 93px;
         height: 93px;
-        border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.5);
+        border: 1px solid rgba($color: $color-white-500, $alpha: 0.5);
         border-radius: 50%;
       }
       .circle__3 {
         width: 76px;
         height: 76px;
-        border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.75);
+        border: 1px solid rgba($color: $color-white-500, $alpha: 0.75);
         border-radius: 50%;
       }
     }
@@ -351,7 +351,7 @@ section#subscription {
   
       &::before {
         content: "\2022";
-        color: variables.$color-orange-500;
+        color: $color-orange-500;
         font-weight: bold;
         display: inline-block; 
         width: 1em;
@@ -363,8 +363,8 @@ section#subscription {
   
       & > h2 {
         font-size: 28px;
-        font-weight: variables.$font-bold;
-        color: variables.$color-blue-700;
+        font-weight: $font-bold;
+        color: $color-blue-700;
       }
   
       p {
@@ -381,7 +381,7 @@ section#action {
   margin: 70px auto;
 
   height: 150px;
-  border: 1px solid variables.$color-gray-700;
+  border: 1px solid $color-gray-700;
   border-radius: 45px;
 }
 
@@ -395,8 +395,8 @@ section#action {
 
   h2 {
     font-size: 68px;
-    font-weight: variables.$font-black;
-    color: variables.$color-blue-500;
+    font-weight: $font-black;
+    color: $color-blue-500;
 
     &::before {
       content: '$';
@@ -409,8 +409,8 @@ section#action {
 
   span {
     font-size: 9px;
-    font-weight: variables.$font-bold;
-    color: variables.$color-blue-700;
+    font-weight: $font-bold;
+    color: $color-blue-700;
     @include helpers.letter-spacing(117);
     position: absolute;
     top: 0;
@@ -421,11 +421,11 @@ section#action {
     height: 44px;
     width: 158px;
     font-size: 14px;
-    font-weight: variables.$font-black;
+    font-weight: $font-black;
     @include helpers.letter-spacing(100);
 
     &.button__primary {
-      background: variables.$color-orange-500;
+      background: $color-orange-500;
     }
   }
 }

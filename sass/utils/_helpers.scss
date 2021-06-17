@@ -1,3 +1,4 @@
+@use 'variables' as *;
 @use 'sass:math';
 
 @mixin letter-spacing($letter-spacing) {
@@ -5,4 +6,33 @@
 }
 @mixin line-height($line-height, $font-size) {
   line-height: $line-height / $font-size;
+}
+
+%centered-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin list-style {
+  list-style: none;
+  font-size: 14px;
+  line-height: 30px;
+  
+  li {
+  
+    &::before {
+      content: "\2022";
+      color: $color-orange-500;
+      font-weight: bold;
+      display: inline-block; 
+      width: 1em;
+    }
+  }
+}
+
+@mixin paragraph {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: $font-regular;
 }

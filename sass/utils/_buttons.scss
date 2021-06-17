@@ -1,0 +1,26 @@
+@use 'variables' as *;
+@use 'helpers' as h;
+
+.btn {
+  height: 44px;
+
+  font-size: 14px;
+  font-weight: $font-black;
+  @include h.letter-spacing(100);
+  text-transform: uppercase;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 25px;
+}
+
+.btn--primary {
+  background: $color-orange-500;
+  color: $color-white;
+}
+
+.btn--secondary {
+  // background: $color-orange-500;
+  // color: $color-white;
+}
