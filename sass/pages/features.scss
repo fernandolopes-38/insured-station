@@ -1,15 +1,16 @@
 @use '../utils/variables' as *;
 @use '../utils/helpers' as h;
-@use '../utils/price';
+@use '../utils/price' as p;
 @use '../utils/buttons';
 
-@import '../global';
+@use '../global';
 
-@import '../components/header';
-@import '../components/footer';
+@use '../components/header';
+@use '../components/footer';
 
 main {
   max-width: 1440px;
+  padding: 0 2rem;
   margin: 0 auto;
 }
 
@@ -134,12 +135,17 @@ section#pricing {
   .pricing-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 283px;
+    gap: 30px;
     margin-left: 20px;
+
+    .price {
+      @include p.price;
+    }
 
     button {
       width: 158px;
+      @extend %btn;
+      @extend %btn-primary;
     }
   }
 }

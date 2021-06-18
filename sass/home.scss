@@ -1,0 +1,17 @@
+@use 'global';
+@use 'components/header';
+@use 'components/home/hero';
+@use 'components/home/aboutus';
+@use 'components/home/services';
+@use 'components/home/features';
+@use 'components/home/blog';
+@use 'components/footer';
+
+main {
+  max-width: 1440px;
+  margin: 75px auto 0;
+}
+
+section:not(#blog) {
+  padding: 0 2rem;
+}

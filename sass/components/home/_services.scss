@@ -1,0 +1,79 @@
+@use '../../utils/variables' as *;
+@use '../../utils/helpers' as h;
+@use '../../utils/buttons';
+
+section#services {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10.9375rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .infos {
+    flex: 0 1 546px;
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.34;
+      font-weight: $font-black;
+      color: $color-blue-700;
+
+      span {
+        color: $color-orange-500;
+      }
+    }
+
+    p {
+      @include h.paragraph();
+      margin: 25px 0;
+    }
+
+    .types {
+      display: flex;
+
+      ul {
+        @include h.list-style();
+
+        & + ul {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+
+  .button {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    button {
+      @extend %btn;
+    }
+    &__primary {
+      width: 128px;
+      @extend %btn-primary;
+    }
+    &__secundary {
+      width: 122px;
+      @extend %btn-secondary;
+    }
+  }
+
+  figure {
+    flex: 0 1 610px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use 'variables' as *;
+@use 'helpers' as h;
+@use 'buttons';
+
+input, textarea {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+%border-radius {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 18px;
+}
+
+@mixin input-container {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @extend %border-radius;
+  
+  background: $color-white;
+  box-shadow: 0 0 25px rgba($color: #000000, $alpha: .06);
+
+  input {
+    width: 100%;
+    height: 100%;
+
+    padding-left: 14px;
+    
+    @extend %border-radius;
+    background: transparent;
+
+    &:focus {
+      box-shadow: 0 0 25px rgba($color: #000000, $alpha: .25);
+    }
+
+    &::placeholder {
+      font-size: 12px;
+      font-weight: $font-medium;
+      @include h.letter-spacing(100);
+      color: rgba($color: $color-blue-700, $alpha: .5);;
+    }
+  }
+
+
+  button {
+    position: absolute;
+    right: 10px;
+    @extend %btn-form;
+    @extend %btn-primary;
+  }
+}

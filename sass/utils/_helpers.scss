@@ -14,10 +14,17 @@
   justify-content: center;
 }
 
+%img-border-radius {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 250px;
+}
+
 @mixin list-style {
   list-style: none;
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 0.875rem;
+  line-height: 1.875;
   
   li {
   
@@ -32,7 +39,12 @@
 }
 
 @mixin paragraph {
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 0.875rem;
+  line-height: 1.875;
   font-weight: $font-regular;
 }
+
+@mixin white-gradient {
+  background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+

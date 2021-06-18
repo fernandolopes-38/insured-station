@@ -1,7 +1,9 @@
-@use '../utils/_variables';
+@use '../utils/variables' as *;
+@use '../utils/form' as f;
 
 footer {
-  background: variables.$color-gray-200;
+  padding: 0 2rem;
+  background: $color-gray-200;
 
   .wrapper {
     max-width: 1150px;
@@ -13,23 +15,25 @@ footer {
     display: flex;
     justify-content: space-between;
 
-    .input-container {
-      height: 45px;
+    form {
+      flex: 0 1 365px;
 
-      input::placeholder {
-        font-size: 12px;
-        line-height: 1.25;
-        font-weight: variables.$font-medium;
-      }
-      
-      button {
-        height: 30px;
-        font-size: 9px;
-        letter-spacing: 1px;
-        padding: 0 17px;
+      .input-container {
+        height: 45px;
+        
+        @include f.input-container;
+        
+        input {
+          padding-right: 145px; 
+        }
+
+        button {
+          width: 123px;
+          height: 30px;
+          font-size: 9px;
+        }
       }
     }
-
   }
 
   .columns {
@@ -44,7 +48,7 @@ footer {
     h2 {
       font-size: 16px;
       letter-spacing: 1px;
-      color: variables.$color-blue-700;
+      color: $color-blue-700;
     }
   }
 
@@ -56,9 +60,9 @@ footer {
     height: 36px;
     width: 36px;
     border-radius: 12px;
-    background: variables.$color-gray-400;
+    background: $color-gray-400;
   
-    color: variables.$color-white;
+    color: $color-white;
 
     & + div {
       margin-top: 10px;
@@ -73,7 +77,7 @@ footer {
   li {
     font-size: 14px;    
     margin-top: 10px;
-    color: variables.$color-gray-500;
+    color: $color-gray-500;
   }
 
   .foot {
@@ -81,16 +85,16 @@ footer {
     align-items: center;
     justify-content: space-between;
 
-    border-top: 1px solid variables.$color-gray-400;
+    border-top: 1px solid $color-gray-400;
     padding-top: 40px;
 
     p {
       font-size: 12px;
-      font-weight: variables.$font-bold;
-      color: variables.$color-gray-500;
+      font-weight: $font-bold;
+      color: $color-gray-500;
 
       & + p {
-        font-weight: variables.$font-regular;
+        font-weight: $font-regular;
         margin-top: 8px;
       }
     }

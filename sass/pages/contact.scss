@@ -1,10 +1,10 @@
 @use '../utils/variables' as *;
-@use '../utils/helpers';
+@use '../utils/buttons';
 
-@import '../global';
+@use '../global';
 
-@import '../components/header';
-@import '../components/footer';
+@use '../components/header';
+@use '../components/footer';
 
 main {
   max-width: 1440px;
@@ -100,12 +100,9 @@ main {
       width: 152px;
       height: 41px;
 
-      font-size: 14px;
-      font-weight: $font-bold;
-      @include helpers.letter-spacing(60);
-
-      background: $color-orange-500;
-      border-radius: 25px;
+      @extend %btn-form;
+      @extend %btn-primary;
+      
       margin-top: 22px;
     }
   }

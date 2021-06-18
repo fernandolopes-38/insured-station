@@ -1,10 +1,10 @@
 @use 'variables' as *;
 @use 'helpers' as h;
 
-.btn {
-  height: 44px;
+%btn {
+  height: 2.75rem;
 
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: $font-black;
   @include h.letter-spacing(100);
   text-transform: uppercase;
@@ -14,13 +14,56 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 25px;
 }
+%btn-header {
+  width: 120px;
+  height: 40px;
 
-.btn--primary {
-  background: $color-orange-500;
-  color: $color-white;
+  font-size: 13px;
+  font-weight: $font-black;
+  @include h.letter-spacing(150);
+  text-transform: uppercase;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 15px;
 }
+%btn-form {
+  font-weight: $font-black;
+  @include h.letter-spacing(100);
+  text-transform: uppercase;
 
-.btn--secondary {
-  // background: $color-orange-500;
-  // color: $color-white;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 18px;
+}
+%btn-primary {
+  color: $color-white;
+  background: $color-orange-500;
+}
+%btn-primary-white {
+  color: $color-orange-500;
+  background: $color-white;
+  border: 1px solid $color-orange-500;
+}
+%btn-secondary {
+  color: $color-blue-500;
+  background: rgba($color: $color-blue-500, $alpha: 0.1);
+  border: 1px solid $color-blue-500;
+}
+%btn-blog {
+  font-weight: $font-bold;
+  color: $color-white;
+  border: 3px solid $color-orange-500;
+  border-radius: 2.375rem;
+  background: transparent;
+}
+%btn-form {
+  font-size: 0.875rem;
+  font-weight: $font-black;
+  @include h.letter-spacing(100);
+  text-transform: uppercase;
+
+  border-radius: 29px;
 }

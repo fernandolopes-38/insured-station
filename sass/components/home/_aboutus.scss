@@ -1,4 +1,6 @@
-@use '../utils/_variables';
+@use '../../utils/variables' as *;
+@use '../../utils/helpers' as h;
+@use '../../utils/buttons';
 
 section#aboutUs {
   max-width: 1080px;
@@ -14,11 +16,11 @@ section#aboutUs {
     h1 {
       font-size: 32px;
       line-height: 43px;
-      font-weight: variables.$font-black;
-      color: variables.$color-blue-700;
+      font-weight: $font-black;
+      color: $color-blue-700;
 
       span {
-        color: variables.$color-orange-500;
+        color: $color-orange-500;
       }
     }
 
@@ -36,28 +38,37 @@ section#aboutUs {
 
   .carousel {
     position: relative;
-    height: 550px;
+    height: 34rem;
 
-    margin-top: 68px;
+    margin-top: 4.25rem;
 
     article {
       position: absolute;
+      height: 100%;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 3.75rem;
 
       opacity: 0;
 
       transition: opacity 1s ease 0s;
 
-      & > img {
-        max-width: 550px;
-        min-height: 550px;
-  
+      figure {
+        flex: 0 1 550px;
+
         border-top-left-radius: 25px;
         border-top-right-radius: 75px;
         border-bottom-right-radius: 25px;
         border-bottom-left-radius: 250px;
+
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
       }
+
     }
 
     input {
@@ -66,7 +77,7 @@ section#aboutUs {
   }
 
   .infos {
-    margin-left: 80px;
+    flex: 1 1 575px;
 
     .title {
       position: relative;
@@ -74,9 +85,9 @@ section#aboutUs {
       align-items: center;
 
       &__img {
-        width: 58px;
-        height: 58px;
-        border: 1px solid variables.$color-white-500;
+        width: 3.625rem;
+        height: 3.625rem;
+        border: 1px solid $color-white-500;
         border-radius: 50%;
         
         display: flex;
@@ -84,47 +95,42 @@ section#aboutUs {
         justify-content: center;
 
         img {
-          width: 31px;
-          height: 31px;
+          width: 1.9375rem;
+          height: 1.9375rem;
         }
       }
 
       h2 {
-        font-size: 28px;
-        font-weight: variables.$font-bold;
-        color: variables.$color-blue-500;
-        margin-left: 10.5px;
+        font-size: 1.125rem;
+        font-weight: $font-bold;
+        color: $color-blue-500;
+        margin-left: 0.65625rem;
         z-index: 5;
       }
     }
 
     p {
-      font-size: 14px;
-      line-height: 30px;
+      @include h.paragraph();
       margin: 30px 0;
     }
 
     button {
-      height: 44px;
+      width: 162px;
 
-      font-size: 14px;
-      font-weight: variables.$font-black;
-      letter-spacing: 1.5px;
+      @extend %btn;
 
-      padding: 0 23px;
-
-      color: variables.$color-orange-500;
-      background: variables.$color-white;
-      border: 1px solid variables.$color-orange-500;
+      color: $color-orange-500;
+      background: $color-white;
+      border: 1px solid $color-orange-500;
     }
   }
 
   .img__circles {
     position: absolute;
-    left: -27px;
+    left: -1.6875rem;
 
-    width: 111px;
-    height: 111px;
+    width: 6.9375rem;
+    height: 6.9375rem;
 
     & > div {
       position: absolute;
@@ -133,19 +139,19 @@ section#aboutUs {
     }
 
     .circle__1 {
-      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.25);
+      border: 1px solid rgba($color: $color-white-500, $alpha: 0.25);
       border-radius: 50%;
     }
     .circle__2 {
-      width: 93px;
-      height: 93px;
-      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.5);
+      width: 5.8125rem;
+      height: 5.8125rem;
+      border: 1px solid rgba($color: $color-white-500, $alpha: 0.5);
       border-radius: 50%;
     }
     .circle__3 {
-      width: 76px;
-      height: 76px;
-      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.75);
+      width: 4.75rem;
+      height: 4.75rem;
+      border: 1px solid rgba($color: $color-white-500, $alpha: 0.75);
       border-radius: 50%;
     }
   }
@@ -153,10 +159,12 @@ section#aboutUs {
   .circles {
     position: absolute;
     bottom: -98px;
+    bottom: -6rem;
     left: -134px;
+    left: -7rem;
 
-    width: 320px;
-    height: 320px;
+    width: 20rem;
+    height: 20rem;
 
     z-index: 10;
 
@@ -167,31 +175,31 @@ section#aboutUs {
     }
 
     .circle__1 {
-      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.2);
+      border: 1px solid rgba($color: $color-white-500, $alpha: 0.2);
       border-radius: 50%;
     }
     .circle__2 {
-      width: 280px;
-      height: 280px;
-      border: 1px solid rgba($color: variables.$color-white-500, $alpha: 0.4);
+      width: 17.5rem;
+      height: 17.5rem;
+      border: 1px solid rgba($color: $color-white-500, $alpha: 0.4);
       border-radius: 50%;
     }
     .circle__3 {
-      width: 240px;
-      height: 240px;
-      border: 2px solid rgba($color: variables.$color-white-500, $alpha: 0.6);
+      width: 15rem;
+      height: 15rem;
+      border: 2px solid rgba($color: $color-white-500, $alpha: 0.6);
       border-radius: 50%;
     }
     .circle__4 {
-      width: 200px;
-      height: 200px;
-      border: 2px solid rgba($color: variables.$color-white-500, $alpha: 0.8);
+      width: 12.5rem;
+      height: 12.5rem;
+      border: 2px solid rgba($color: $color-white-500, $alpha: 0.8);
       border-radius: 50%;
     }
     .circle__5 {
-      width: 160px;
-      height: 160px;
-      border: 2px solid variables.$color-white-500;
+      width: 10rem;
+      height: 10rem;
+      border: 2px solid $color-white-500;
       border-radius: 50%;
   
       display: flex;
@@ -200,11 +208,10 @@ section#aboutUs {
     }
   }
 
-
   .labels {
     position: relative;
-    width: 123px;
-    height: 35px;
+    width: 7.75rem;
+    height: 2.125rem;
     transform: rotate(-122deg);
 
     label {
@@ -213,8 +220,8 @@ section#aboutUs {
       cursor: pointer;
 
       i {
-        font-size: 38px;
-        color: variables.$color-blue-700;
+        font-size: 2.375rem;
+        color: $color-blue-700;
       }
     }
   }
@@ -226,7 +233,7 @@ section#aboutUs {
     transform: translate(-50%, -50%) rotate(348deg);
 
     height: 36px;
-    border-left: 1px solid variables.$color-blue-700;
+    border-left: 1px solid $color-blue-700;
   }
 
   $num-of-slide: 3;

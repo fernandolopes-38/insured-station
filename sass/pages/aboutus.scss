@@ -1,20 +1,22 @@
-@use '../utils/_variables';
-@use '../utils/_helpers';
+@use '../utils/variables' as *;
+@use '../utils/helpers' as h;
+@use '../utils/buttons';
 
-@import '../global';
+@use '../global';
 
-@import '../components/header';
-@import '../components/footer';
+@use '../components/header';
+@use '../components/footer';
 
 main {
   max-width: 1440px;
+  padding: 0 2rem;
   margin: 0 auto;
 
   & > h1 {
-    font-size: 72px;
-    line-height: 95px;
-    font-weight: variables.$font-black;
-    color: variables.$color-gray-600;
+    font-size: 4.5rem;
+    // line-height: 95px;
+    font-weight: $font-black;
+    color: $color-gray-600;
     text-align: center;
 
     margin: 150px auto;
@@ -28,29 +30,32 @@ section#content {
   article {
     display: flex;
     align-items: center;
-  
-    & > img {
-      max-width: 550px;
-      min-height: 550px;
-  
-      border-top-left-radius: 25px;
-      border-top-right-radius: 75px;
-      border-bottom-right-radius: 25px;
-      border-bottom-left-radius: 250px;
+    justify-content: space-between;
+    gap: 5rem;
+
+    figure {
+      flex: 0 1 550px;
+
+      @extend %img-border-radius;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
     }
   
     .infos {
-      margin-left: 80px;
+      flex: 1 1 550px;
   
       h2 {
-        font-size: 28px;
-        font-weight: variables.$font-bold;
-        color: variables.$color-blue-700;
+        font-size: 1.75rem;
+        font-weight: $font-bold;
+        color: $color-blue-700;
       }
   
       p {
-        font-size: 14px;
-        line-height: 30px;
+        @include h.paragraph;
         margin: 40px 0;
       }
     }
@@ -61,24 +66,14 @@ section#content {
       justify-content: space-between;
   
       button {
-        height: 44px;
         width: 158px;
-        font-size: 14px;
-        font-weight: variables.$font-black;
-        @include helpers.letter-spacing(100);
-  
-        border-top-left-radius: 10px;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 25px;
+        @extend %btn;
       }
       &__primary {
-        background: variables.$color-orange-500;
+        @extend %btn-primary; 
       }
       &__secundary {
-        color: variables.$color-blue-500;
-        background: rgba($color: variables.$color-blue-500, $alpha: 0.1);
-        border: 1px solid variables.$color-blue-500;
+        @extend %btn-secondary;
       }
     }
   }
@@ -92,11 +87,11 @@ section#sponsors {
   justify-content: space-between;
 
   .square {
-    width: 120px;
+    flex: 0 1 7.5rem;
     height: 80px;
 
-    border: 1px solid variables.$color-gray-100;
-    background-color: variables.$color-white-400;
+    border: 1px solid $color-gray-100;
+    background-color: $color-white-400;
   }
 }
 
@@ -106,14 +101,15 @@ section#infos {
 
   display: flex;
   justify-content: space-between;
+  gap: 4.6875rem;
 
   figure {
-    flex: 0 1 370px;
+    flex: 0 1 23.125rem;
   }
 
   .img-container {
-    width: 370px;
-    height: 242px;
+    max-width: 370px;
+    max-height: 242px;
 
     display: flex;
     align-items: center;
@@ -161,6 +157,6 @@ section#action {
   margin: 70px auto;
 
   height: 150px;
-  border: 1px solid variables.$color-gray-700;
+  border: 1px solid $color-gray-700;
   border-radius: 45px;
 }
