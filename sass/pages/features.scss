@@ -39,6 +39,10 @@ section#title {
 
   .img-container {
     @extend %centered-container;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
