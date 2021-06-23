@@ -1,8 +1,8 @@
+@use '../global';
+
 @use '../utils/variables' as *;
 @use '../utils/helpers' as h;
 @use '../utils/buttons';
-
-@use '../global';
 
 @use '../components/header';
 @use '../components/footer';
